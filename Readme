@@ -31,14 +31,14 @@ foreman_cif.264
 2)test_raw_video_tx.py is to send the video data without any FEC protection
 3)foreman_cif.264 is the testing stream
 
-4. Send video data over usrp with Raptor codes
+4. Send the video data over usrp with Raptor codes
 
 python test_raptor_video_tx.py --tx-freq=908M --rx-freq=921975000 --rx-gain=30 --tx-gain=30 --tx-amplitude=1 -p 1 -T 200
 
 1)p: packet loss rate (%)
 2)T: source symbols size
 
-5. Send video data over usrp without Raptor codes
+5. Send the video data over usrp without Raptor codes
 
 python test_raw_video_tx.py --tx-freq=908M --rx-freq=921975000 --rx-gain=30 --tx-gain=30 --tx-amplitude=1 -k 200
 
@@ -63,14 +63,14 @@ test_raw_video_rx.py
 2)test_raw_video_rx.py is to receive the video data without any FEC protection
 
 
-3. Receive video data over usrp with Raptor codes
+3. Receive the video data over usrp with Raptor codes
 
 python test_raptor_video_rx.py --rx-freq=908M --tx-freq=921975000 --rx-gain=30 --tx-gain=30 --tx-amplitude=1 -p 1
 
 1)p: packet loss rate (%)
 2)T: source symbols size
 
-4. Receive video data over usrp without Raptor codes
+4. Receive the video data over usrp without Raptor codes
 
 python test_raw_video_rx.py --rx-freq=908M --tx-freq=921975000 --rx-gain=30 --tx-gain=30 --tx-amplitude=1 -p 1
 
@@ -78,21 +78,20 @@ python test_raw_video_rx.py --rx-freq=908M --tx-freq=921975000 --rx-gain=30 --tx
 2)T: source symbols size
 
 5. ffplay
-1) Play the video stream with Raptor
+1) Play the video stream with Raptor codes protection
 ffplay -f h264 output_raptor.264
 
-2) Play the video stream without Raptor
+2) Play the video stream without Raptor codes protection
 ffplay -f h264 output_no_raptor.264
 
-
-6. h.264 stream convert to yuv
+6. h.264 streams are converted to yuv
 avconv -i output_raptor.264 -s 352x288 out_raptor.yuv
 
 Note:
 a)avconv is a tool of ffmpeg
 b)out_raptor.yuv is the yuv (raw video) format
 c)-i: input file
-d)-s: the video resolution (or size), in this experiment is cif (352*288)
+d)-s: the video resolution (or size), in this experiment is CIF (352*288)
 
 7. use mplayer to play the yuv file
 You can use mplayer as a YUV player with the example command below.

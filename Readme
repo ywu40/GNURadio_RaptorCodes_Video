@@ -47,7 +47,7 @@ python test_raw_video_tx.py --tx-freq=908M --rx-freq=921975000 --rx-gain=30 --tx
 
 
 
-Receive Side:
+Receiver Side:
 
 1. Compile the C++ codes of Raptor codes in https://github.com/ywu40/RaptorCodes_Cplusplus_Python
 sudo swig -c++ -python raptor_decoder.i

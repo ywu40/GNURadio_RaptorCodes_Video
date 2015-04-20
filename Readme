@@ -6,7 +6,7 @@ http://gnuradio.org/redmine/projects/gnuradio/wiki/InstallingGR
 How to install ffmpeg and x264 under Ubuntu, please refer to:
 https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu
 
-Note: Please run the receiver first, then start the sender.
+Note: Please run the commands at the receiving side first, then start to run the commands at the sending side.
 
 
 
